@@ -1,0 +1,476 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = Noto + Sans + KR : wght @ 900 & display = swap');
+
+/*초기화*/
+
+*{margin: 0; padding: 0;}
+ul,ol {list-style: none;}
+a {text-decoration: none; color: inherit;}
+img{border: 0;}
+
+*{  position: relative;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+    color: #1e1e1e;
+}
+
+#wrap { 
+    min-width: 1280px;
+}
+
+.inner {   
+    max-width: 1160px;
+    margin: 0 auto;
+}
+
+/*공지사항*/
+.sub-top {
+    position: relative;
+    padding-top: 143px;
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0)00%,
+        rgba(20, 20, 20, 0.3)100%),
+    url("../img/subB_01.jpg");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sub-top.gift {
+    position: relative;
+    padding-top: 143px;
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0)00%,
+        rgba(20, 20, 20, 0.3)100%),
+    url("../img/subB_02.jpg");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sub-top.mv {
+    position: relative;
+    padding-top: 143px;
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0)00%,
+        rgba(20, 20, 20, 0.3)100%),
+    url("../img/subB_03.jpg");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sub-top.brand {
+    position: relative;
+    padding-top: 143px;
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0)00%,
+        rgba(20, 20, 20, 0.3)100%),
+    url("../img/subB_04.jpg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.sub-top .sub-wrap {
+    text-align: center;
+    position: relative;
+    width: 100%; height: 100%;
+}
+
+.sub-top .sub-wrap .sub-top-txt {
+    padding-top: 160px;
+}
+
+.sub-top .sub-wrap .sub-top-txt h2 {
+    font-size: 50px;
+    letter-spacing: -2px;
+    color: #fff;
+}
+
+.sub-top .sub-wrap .sub-top-txt p {
+    margin-top: 10px;
+    letter-spacing: -2px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.sub-top .sub-top-nav {
+    z-index: 10;
+    position: absolute;
+    background-color: #1b4329;
+    bottom: -30px;
+}
+
+.sub-top .sub-top-nav .sub-nav {
+    display: flex;
+    width: 1160px; height: 60px;
+}
+
+.sub-top .sub-top-nav .sub-nav .nav-item {
+    border-right: 1px solid #196735;
+    cursor: pointer;
+    width: calc(100%/4);
+    line-height: 60px;
+    color: white;
+    opacity: 0.5;
+}
+
+.sub-top .sub-top-nav .sub-nav .nav-item.on {
+    opacity: 1;
+}
+
+/*게시판*/
+.sub-contents {
+    padding: 135px 0;
+}
+
+.top-container {
+    text-align: right;
+}
+
+.sub-contents .boards-top {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+}
+
+.sub-contents .boards-top .key {
+    width: 97px; height: 100%;
+    border: solid 1px #d9d9d9;
+    border-radius: 5px;
+    line-height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.sub-contents .boards-top .search {
+    display: flex;
+    width: 200px;height: 100%;
+    border: solid 1px #d9d9d9;
+    border-radius: 5px;
+    margin-left: 10px;
+    line-height: 40px;
+
+}
+
+.sub-contents .boards-top .search input {
+    display: inline-block;
+    border: 0px;
+    width: 80%;
+    outline: none;
+    padding-left: 10px;
+
+}
+.sub-contents .boards-top .search button {
+    width: 20%;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.sub-contents .boards-top .search button i {
+    color: #196735;
+}
+
+
+/*공지사항 표*/
+
+.boards-table {
+    margin-top: 20px;
+    border-top: 2px solid #196735;
+    table-layout:fixed;
+}
+
+table {
+    width: 100%;
+    border-collapse:collapse;
+    word-break:break-all;
+}
+
+.boards-table td.title {
+    text-align: left;
+    padding-left: 60px;
+}
+.boards-table th, 
+.boards-table td {
+    text-align: center;
+    height: 70px;
+    border-bottom: 1px solid #dedede;
+}
+.boards-table th.no {
+    width: 90px;
+}
+
+.boards-table th.date {
+    width: 140px;
+}
+
+.page-nav {
+    margin-top: 60px;
+}
+.page-nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.page-nav ul li {
+    cursor: pointer;
+    padding: 0 10px;
+}
+.page-nav ul li.on {
+    color: #196735;
+    font-weight: bold;
+}
+
+/*상품권 안내*/
+
+.gift-card {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.gift-card .G-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gift-card .G-price {
+    font-size: 16px;
+    color: #c60000;
+}
+
+.gift-box .GB-arrow {
+    position: absolute;
+    top: -20px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.gift-box {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    background-color: #efefef;
+    padding: 70px 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.gift-box .G-box {
+    width: 100%;
+    display: table-cell;
+    vertical-align: center;
+    border-right: 1px solid #b2b2b2;
+}
+
+.gift-box .G-box:last-child {
+    border: 0;
+}
+
+.gift-box .G-box .GB-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gift-box .G-box .GB-sub {
+    margin-top: 2px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.gift-info {
+    width: 100%;
+    background-color: #efefef;
+    margin-top: 50px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+}
+
+.gift-info .GI-title {
+    font-size: 20px;
+}
+
+.gift-info .GI-title::after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2px;
+    margin: 25px 0;
+    background: #b2b2b2;
+}
+
+/* .gift-info .GI-txt ul  {
+    padding-left: 20px;
+} */
+.gift-info .GI-txt ul li {
+    line-height: 30px;
+}
+
+.gift-info .GI-txt ul li::before {
+    content: "-";
+    padding-right: 10px;
+}
+
+/*영상*/
+
+.kryspy-mv .mv-title {
+    text-align: center;
+}
+
+.kryspy-mv .mv-title h2 {
+    color:  #1b4329;
+}
+
+.kryspy-mv .mv-title p {
+    margin: 10px 0 40px 0;
+    font-weight: 400;
+}
+.kryspy-mv .mv-main {
+    width: 100%;
+    height: 650px
+}
+
+.kryspy-mv .mv-main iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.kryspy-mv .mv-list {
+    margin-top: 70px;
+    display: flex;
+}
+
+.kryspy-mv .mv-sub {
+    width: calc(100% / 5 - 20px);
+    margin: 0 10px;
+}
+
+.kryspy-mv .mv-sub img {
+    width: 100%;
+    display: block;
+}
+
+.kryspy-mv .mv-sub p {
+    color: #8b8b8b;
+    font-size: 14px;
+    text-align: center;
+    padding: 30px 0;
+    border: 1px solid #cccccc;
+    box-sizing: border-box
+}
+
+
+/*브랜드 스토리*/
+
+.brand-top {
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(20, 20, 20, 0.5)100%,
+        rgba(20, 20, 20, 0.5)100%),
+    url("../img/brand_01.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.brand-top p {
+    padding-top: 130px;
+    color: white;
+    margin-bottom: 15px;
+}
+.brand-top img {
+    width: 40%;
+}
+.brand-center .brand-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.brand-center .brand-list .brnad-img {
+    overflow: hidden;
+}
+
+.brand-center .brand-list .brnad-img:nth-child(3) {
+    overflow: hidden;
+    text-align: bottom;
+}
+
+.brand-center .brand-list .brnad-img img {
+    width: 100%;
+}
+.brand-center .brand-list .brand-num {
+    width: 150px;
+    height: auto;
+}
+.brand-center .brand-list .brnad-img {
+    width: 650px;
+    height: 300px;
+    background-color: violet;
+}
+
+.brand-center .brand-list .brand-txt h2{
+    margin-top: 20px;
+}
+
+.brand-center .brand-list .brand-txt h2::after {
+    content: '';
+    width: 20px;
+    height: 2px;
+    background-color: #cd0000;
+    display: block;
+    margin: 20px 0;
+}
+
+/*Share The Love*/
+
+.brand-bottom .STL-title {
+    margin-top: 120px;
+    display: flex;
+}
+.brand-bottom .STL-title h2 {
+    margin-right: 40px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 900;
+    color: #cd0000;;
+}
+
+.brand-bottom .STl-list ul{
+    display: flex;
+    margin-top: 20px;
+}
+
+.brand-bottom .STl-list ul li {
+    margin-top: 70px;
+    text-align: center;
+    width: calc(100% / 4);
+}
+
+.brand-bottom .STl-list ul li h2 {
+    margin-bottom: 10px;
+}
+.brand-bottom .STl-list ul li img {
+    width: 25%;
+    height: auto;
+    margin-bottom: 30px;
+}
